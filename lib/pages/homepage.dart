@@ -163,7 +163,7 @@ class _HomePageState extends State<HomePage> {
 
   String get _selectedDateLabel {
     if (_selectedPlanDate == null) {
-      return 'Tất cả ngày';
+      return _displayDateFormat.format(DateTime.now());
     }
     return _displayDateFormat.format(_selectedPlanDate!);
   }
@@ -355,7 +355,8 @@ class _HomePageState extends State<HomePage> {
             flex: 5,
             child: Text(
               'Locator',
-              style: TextStyle(fontWeight: FontWeight.w700),
+              textAlign: TextAlign.center,
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
             ),
           ),
           const Expanded(
@@ -363,7 +364,7 @@ class _HomePageState extends State<HomePage> {
             child: Text(
               'SRN',
               textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.w700),
+              style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),
             ),
           ),
           Expanded(
@@ -372,7 +373,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 const Text(
-                  'Chọn',
+                  '',
                   style: TextStyle(fontWeight: FontWeight.w700),
                 ),
                 if (_isPendingMode)
@@ -571,16 +572,12 @@ class _HomePageState extends State<HomePage> {
                                 Expanded(
                                   flex: 5,
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    // crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         locator,
-                                        style: const TextStyle(fontWeight: FontWeight.bold),
-                                      ),
-                                      const SizedBox(height: 4),
-                                      Text(
-                                        'SRN: ${srnLabel.isEmpty ? '-' : srnLabel}',
-                                        style: Theme.of(context).textTheme.bodySmall,
+                                        textAlign: TextAlign.center,
+                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20,),
                                       ),
                                     ],
                                   ),
@@ -593,6 +590,7 @@ class _HomePageState extends State<HomePage> {
                                     style: const TextStyle(
                                       fontWeight: FontWeight.w600,
                                       color: Colors.blueAccent,
+                                      fontSize: 16
                                     ),
                                   ),
                                 ),
