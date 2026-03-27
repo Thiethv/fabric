@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:stock_submat/pages/homepage.dart';
-import 'package:stock_submat/settings/config.dart';
+import 'package:stock_fabric/pages/homepage.dart';
+import 'package:stock_fabric/settings/config.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {

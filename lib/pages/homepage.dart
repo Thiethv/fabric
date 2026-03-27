@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:stock_submat/services/supabase_func.dart';
+import 'package:stock_fabric/services/supabase_func.dart';
 
 enum ResultViewMode { pending, history }
 

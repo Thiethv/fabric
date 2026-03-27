@@ -1,5 +1,5 @@
 
-import 'package:stock_submat/main.dart';
+import 'package:stock_fabric/main.dart';
 
 class SupabaseFunc{
   Future<List<Map<String, dynamic>>> fetchSrn({
